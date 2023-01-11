@@ -21,3 +21,39 @@ a{
 a:hover{
     text-decoration: underline;
 }
+.header {
+    background-color: #1b4223;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    flex-wrap: wrap;
+    height: 90px
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav li {
+    margin-left: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.signin {
+    padding-top: 60px;
+}
+
+.signin2 a{
+    color: black;
+}
+.footer {
+    font-size: 10px;
+}
