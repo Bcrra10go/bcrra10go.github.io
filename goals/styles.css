@@ -47,8 +47,9 @@ a:hover{
     color: white;
 }
 
-.signin {
+.signIn {
     padding-top: 60px;
+    font-size: 180x;
 }
 
 .signin2 a{
@@ -56,4 +57,29 @@ a:hover{
 }
 .footer {
     font-size: 10px;
+}
+input {
+    border-radius: 25px;
+  padding: 20px;
+  width: 150px;
+  height: 0px;
+}
+
+#button1{
+    border-radius: 100px;
+    padding: 5px 10px;
+    background-color:white;
+    color: black;
+    transition: 0.5s;
+    font-size: 15px;
+
+}
+
+#button1:hover{
+    
+    background-color:rgba(50, 67, 67, 0.702);
+    color: black;
+}
+.tableCreate {
+    font-size: 18px;
 }
