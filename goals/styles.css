@@ -17,11 +17,12 @@ body {
     justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 5%;
+    padding-right: 20px;
     flex-wrap: wrap;
     height: 90px;
     width: 100%;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .header img{
@@ -51,7 +52,7 @@ a:hover{
     text-decoration: underline;
 }
 
-input {
+.input_text {
     border-radius: 25px;
     padding: 20px;
     width: 150px;
@@ -75,4 +76,9 @@ table td {
 
 tbody tr:nth-of-type(odd) {
     background-color: #a779296f
+}
+
+button {
+    background-color: #a779298c;
+    border-radius: 8px;
 }
