@@ -51,14 +51,39 @@ a:hover{
     color: rgb(74, 74, 74);
     text-decoration: underline;
 }
-.header {
-    background-color: #1b4223;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 40px;
-    flex-wrap: wrap;
-    height: 90px
+
+.input_text {
+    border-radius: 25px;
+    padding: 20px;
+    width: 150px;
+    height: 0px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+table {
+    background-color: transparent;
+    margin-bottom: 1rem;
+    width: 80%;
+}
+
+table th,
+table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: #a779296f
+}
+
+button {
+    background-color: #a779298c;
+    border-radius: 8px;
 }
 
 .nav {
@@ -88,8 +113,8 @@ a:hover{
 .footer {
     font-size: 10px;
 }
-input {
-    border-radius: 25px;
+input[type = button] {
+  border-radius: 25px;
   padding: 20px;
   width: 150px;
   height: 0px;
@@ -112,35 +137,4 @@ input {
 }
 .tableCreate {
     font-size: 18px;
-}
-
-.input_text {
-    border-radius: 25px;
-    padding: 20px;
-    width: 150px;
-    height: 0px;
-}
-
-
-table {
-    background-color: transparent;
-    margin-bottom: 1rem;
-    width: 80%;
-    display: inline;
-    align-self: center;
-}
-
-table th,
-table td {
-    padding: 0.75rem;
-    vertical-align: middle;
-}
-
-tbody tr:nth-of-type(odd) {
-    background-color: #a779296f
-}
-
-button {
-    background-color: #a779298c;
-    border-radius: 8px;
 }

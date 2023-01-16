@@ -9,14 +9,27 @@
     <title>Create</title>
 </head>
 <body>
+
+    <div class="header">
+        <div class="header_item"><a href="index.html"><img src="./images/S.png" alt="Logo"></a></div>
+        <div class="header_item"><a href="signin.html">Sign out</a></div>
+    </div>
+    <br>
+
+    <h2>
+        Create a new SMART Goal
+    </h2>
     
-    <input  type="text" style="font-size: 20px; text-align: center" placeholder="Goal name">
+    <input  class = "input_text" type="text" style="font-size: 20px; text-align: center" placeholder="Goal name">
+
+    <br>
+    <br>
     
-    <table class="tableCreate">
+    <table class="center">
         <tr>
             <td>
                 <p>Specific</p>
-                <input class="input_text" type="text" placeholder="clearly state your goal">
+                <input class="input_text" type="text" placeholder="Clearly state your goal">
             </td>
             <td>
                 <p>Targets</p>
@@ -27,7 +40,7 @@
         <tr>
             <td>
                 <p>Measurable</p>
-                <input class="input_text" type="text" placeholder="how can you measure it?">
+                <input class="input_text" type="text" placeholder="How can you measure it?">
             </td>
             <td>
                 <button type="button">+</button>
@@ -37,26 +50,29 @@
         <tr>
             <td>
                 <p>Attainable</p>
-                <input class="input_text" type="text" placeholder="can you attain your goal?">
+                <input class="input_text" type="text" placeholder="Can you attain your goal?">
             </td>
         </tr>
 
         <tr>
             <td>
                 <p>Relevant</p>
-                <input class="input_text" type="text" placeholder="goal should be relevant">
+                <input class="input_text" type="text" placeholder="Goal should be relevant">
             </td>
         </tr>
 
         <tr>
             <td>
                 <p>Time-based</p>
-                <input class="input_text" type="text" placeholder="set a deadline">
+                <input class="input_text" type="text" placeholder="Set a deadline">
             </td>
         </tr>
     </table>
 
     <br>
+    <br>
+
+    <button type="button" onclick="location.href='index.html'">Submit</button>
     <footer>
         <p>Developed by Urte and Diego</p>
     </footer>
