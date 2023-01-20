@@ -1,0 +1,140 @@
+body {
+    background-color: rgb(233, 236, 236);
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
+
+.header {
+    background-color: #a77929;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    flex-wrap: wrap;
+    height: 90px;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.header img{
+    max-width: 60px;
+    max-height: auto;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.signin {
+    padding-top: 60px;
+
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(74, 74, 74);
+    text-decoration: underline;
+}
+
+.input_text {
+    border-radius: 25px;
+    padding: 20px;
+    width: 150px;
+    height: 0px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+table {
+    background-color: transparent;
+    margin-bottom: 1rem;
+    width: 80%;
+}
+
+table th,
+table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: #a779296f
+}
+
+button {
+    background-color: #a779298c;
+    border-radius: 8px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav li {
+    margin-left: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.signIn {
+    padding-top: 60px;
+    font-size: 180x;
+}
+
+.signin2 a{
+    color: black;
+}
+.footer {
+    font-size: 10px;
+}
+input[type = button] {
+  border-radius: 25px;
+  padding: 20px;
+  width: 150px;
+  height: 0px;
+}
+
+#button1{
+    border-radius: 100px;
+    padding: 5px 10px;
+    background-color:white;
+    color: black;
+    transition: 0.5s;
+    font-size: 15px;
+
+}
+
+#button1:hover{
+    
+    background-color:rgba(50, 67, 67, 0.702);
+    color: black;
+}
+.tableCreate {
+    font-size: 18px;
+}
