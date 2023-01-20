@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/S.png" rel="icon">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Sign Up</title>
+</head>
+<body onClick="onClick()">
+    <div class="header">
+        <div class="header_item"><img src="./images/S.png" alt="Logo"></div>
+    </div>
+
+    <br>
+        <p>Clicks: <a id="clicks">0</a></p>
+        <p>Totals keys pressed: <a id="keys">0</a></p>
+        <p>Totals time elapsed: <a id="time">0</a> sec</p>
+        <p>Totals characters typed: <a id="characters">0</a></p>
+    <br>
+
+    <h1>Sign Up</h1>
+
+        <label for="firstname">First Name:</label><br>
+        <input class="input_text" type="text" id="firstname" name="firstname" onKeyPress="onKeyPress1()" onKeyUp="countCharacter1(this)">
+        <p>Keys pressed: <a id="firstnamek">0</a></p>
+        <p>Characters typed: <a id="firstnamec">0</a></p><br>
+
+        <label for="email">Email:</label><br>
+        <input class="input_text" type="email" id="email" name="email" onKeyPress="onKeyPress2()" onKeyUp="countCharacter2(this)">
+        <p>Keys pressed: <a id="emailk">0</a></p>
+        <p>Characters typed: <a id="emailc">0</a></p><br>
+
+        <label for="username">Username:</label><br>
+        <input class="input_text" type="text" id="username" name="username" onKeyPress="onKeyPress3()" onKeyUp="countCharacter3(this)">
+        <p>Keys pressed: <a id="usernamek">0</a></p>
+        <p>Characters typed: <a id="usernamec">0</a></p><br>
+
+        <label for="password">Password:</label><br>
+        <input class="input_text" type="password" id="password" name="password" onKeyPress="onKeyPress4()" onKeyUp="countCharacter4(this)">
+        <p>Keys pressed: <a id="passwordk">0</a></p>
+        <p>Characters typed: <a id="passwordc">0</a></p><br>
+
+        <label for="confirmationpassword">Password confirmation:</label><br>
+        <input class="input_text" type="password" id="confirmationpassword" name="confirmationpassword" onKeyPress="onKeyPress5()" onKeyUp="countCharacter5(this)">
+        <p>Keys pressed: <a id="confirmationpasswordk">0</a></p>
+        <p>Characters typed: <a id="passwordconfirmationc">0</a></p><br>
+
+        <button onclick="location.href='index.html'">Sign Up</button><br>
+
+        <footer>
+        <p>Developed by Urte and Diego</p>
+        </footer>
+
+</body>
+</html>
