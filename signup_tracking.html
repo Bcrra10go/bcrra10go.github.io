@@ -24,29 +24,29 @@
 	<h1>Sign Up</h1>
 	
 	<label for="firstname">First Name:</label><br>
-	<input class="input_text" type="text" id="firstname" name="firstname" onKeyPress="onKeyPress1()" onKeyUp="countCharacter1(this)">
-	<p>Keys pressed: <a id="firstnamek">0</a></p>
-	<p>Characters typed: <a id="firstnamec">0</a></p><br>
+	<input class="input_text" type="text" id="firstname" name="firstname" onKeyUp="onKeyPress(this)">
+	<p><span>Keys pressed: </span><a id="firstnamek">0</a></p>
+	<p><span>Characters typed: </span><a id="firstnamec">0</a></p><br>
 	
 	<label for="email">Email:</label><br>
-	<input class="input_text" type="email" id="email" name="email" onKeyPress="onKeyPress2()" onKeyUp="countCharacter2(this)">
-	<p>Keys pressed: <a id="emailk">0</a></p>
-	<p>Characters typed: <a id="emailc">0</a></p><br>
+	<input class="input_text" type="email" id="email" name="email" onKeyUp="onKeyPress(this)">
+	<p><span>Keys pressed: </span><a id="emailk">0</a></p>
+	<p><span>Characters typed: </span><a id="emailc">0</a></p><br>
 	
 	<label for="username">Username:</label><br>
-	<input class="input_text" type="text" id="username" name="username" onKeyPress="onKeyPress3()" onKeyUp="countCharacter3(this)">
-	<p>Keys pressed: <a id="usernamek">0</a></p>
-	<p>Characters typed: <a id="usernamec">0</a></p><br>
+	<input class="input_text" type="text" id="username" name="username" onKeyUp="onKeyPress(this)">
+	<p><span>Keys pressed: </span><a id="usernamek">0</a></p>
+	<p><span>Characters typed: </span><a id="usernamec">0</a></p><br>
 	
 	<label for="password">Password:</label><br>
-	<input class="input_text" type="password" id="password" name="password" onKeyPress="onKeyPress4()" onKeyUp="countCharacter4(this)">
-	<p>Keys pressed: <a id="passwordk">0</a></p>
-	<p>Characters typed: <a id="passwordc">0</a></p><br>
+	<input class="input_text" type="password" id="password" name="password" onKeyUp="onKeyPress(this)">
+	<p><span>Keys pressed: </span><a id="passwordk">0</a></p>
+	<p><span>Characters typed: </span><a id="passwordc">0</a></p><br>
 	
 	<label for="confirmationpassword">Password confirmation:</label><br>
-	<input class="input_text" type="password" id="confirmationpassword" name="confirmationpassword" onKeyPress="onKeyPress5()" onKeyUp="countCharacter5(this)">
-	<p>Keys pressed: <a id="confirmationpasswordk">0</a></p>
-	<p>Characters typed: <a id="passwordconfirmationc">0</a></p><br>
+	<input class="input_text" type="password" id="confirmationpassword" name="confirmationpassword" onKeyUp="onKeyPress(this)">
+	<p><span>Keys pressed: </span><a id="confirmationpasswordk">0</a></p>
+	<p><span>Characters typed: </span><a id="passwordconfirmationc">0</a></p><br>
 	
 	<button onclick="location.href='index.html'">Sign Up</button><br>
 	
@@ -56,3 +56,4 @@
 	
 	</body>
 	</html>
+
