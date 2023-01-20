@@ -12,32 +12,56 @@
     <div class="header">
         <div class="header_item"><img src="./images/S.png" alt="Logo"></div>
     </div>
-    <h1>Sign Up</h1>
+    <form action="">
+        <h1>Sign Up</h1>
 
-        <label for="firstname">First Name:</label><br>
-        <input class="input_text" type="text" id="firstname" name="firstname" onKeyPress="onKeyPress1()">
-        <br><br>
-
-        <label for="email">Email:</label><br>
-        <input class="input_text" type="email" id="email" name="email" onKeyPress="onKeyPress2()">
-        <br><br>
-
-        <label for="username">Username:</label><br>
-        <input class="input_text" type="text" id="username" name="username" onKeyPress="onKeyPress3()">
+        <label for="userID">User ID:</label><br>
+        <input class="input_text" type="text" id="userID" name="userID" minlength="5" maxlength="12" required>
         <br><br>
 
         <label for="password">Password:</label><br>
-        <input class="input_text" type="password" id="password" name="password" onKeyPress="onKeyPress4()"">
+        <input class="input_text" type="password" id="password" name="password" minlength="12" required>
         <br><br>
 
-        <label for="confirmationpassword">Password confirmation:</label><br>
-        <input class="input_text" type="password" id="confirmationpassword" name="confirmationpassword" onKeyPress="onKeyPress5()">
+        <label for="firstname">Name:</label><br>
+        <input class="input_text" type="text" id="firstname" name="firstname" required>
         <br><br>
 
-        <button onclick="location.href='index.html'">Sign Up</button><br>
+        <label for="address">Address:</label><br>
+        <input class="input_text" type="text" id="address" name="address">
+        <br><br>
+
+        <label for="country">Country:</label><br>
+        <input class="input_text" type="text" id="country" name="country" required>
+        <br><br>
+
+        <label for="zip">ZIP code:</label><br>
+        <input class="input_text" type="text" id="zip" name="zip" required>
+        <br><br>
+
+        <label for="email">Email:</label><br>
+        <input class="input_text" type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="sex">Sex:</label><br>
+        <input class="input_text" type="text" id="sex" name="sex" required>
+        <br><br>
+
+        <label for="language">Language:</label><br>
+        <input class="input_text" type="text" id="language" name="language" required>
+        <br><br>
+
+        <label for="about">About/bio:</label><br>
+        <input class="input_text" type="text" id="about" name="about">
+        <br><br>
+
+        <button type="submit">Sign Up</button><br>
 
         <br>
         <br>
+        
+    </form>
+    
         <footer>
         <p>Developed by Urte and Diego</p>
         </footer>
