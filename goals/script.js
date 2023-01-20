@@ -5,7 +5,7 @@ var keys = 0;
 var k1 = 0, k2 = 0, k3 = 0, k4 = 0, k5 = 0;
 
 
-function press(){
+function onClick(){
     clicks++;
     document.getElementById("clicks").innerHTML = clicks;
 }
