@@ -4,6 +4,7 @@ var clicks = 0;
 var keys = 0;
 var k1 = 0, k2 = 0, k3 = 0, k4 = 0, k5 = 0;
 var c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0;
+var map = {};
 
 
 function onClick(){
@@ -16,34 +17,22 @@ function totalKeys(){
     document.getElementById("keys").innerHTML = keys;
 }
 
-function onKeyPress1(){
-    k1++;
-    document.getElementById("firstnamek").innerHTML = k1;
-    totalKeys();
-}
+function onKeyPress(obj){
+    var element = obj.nextSibling.nextSibling;
 
-function onKeyPress2(){
-    k2++;
-    document.getElementById("emailk").innerHTML = k2;
-    totalKeys();
-}
+    var child = element.children[1];
+    console.log(child);
+    var x = parseInt(child.innerHTML);
+    child.innerHTML = x + 1;
 
-function onKeyPress3(){
-    k3++;
-    document.getElementById("usernamek").innerHTML = k3;
-    totalKeys();
-}
+    element = element.nextSibling.nextSibling;
 
-function onKeyPress4(){
-    k4++;
-    document.getElementById("passwordk").innerHTML = k4;
+    child = element.children[1];
+    console.log(child);
+    child.innerHTML = obj.value.length;
+    map[obj] = obj.value.length;
     totalKeys();
-}
-
-function onKeyPress5(){
-    k5++;
-    document.getElementById("confirmationpasswordk").innerHTML = k5;
-    totalKeys();
+    characters();
 }
 
 function time(){
@@ -52,38 +41,13 @@ function time(){
     document.getElementById("time").innerHTML = sec2;
 }
 
-function countCharacter1(obj){
-    c1 = obj.value.length;
-    document.getElementById("firstnamec").innerHTML = c1;
-    characters();
-}
-
-function countCharacter2(obj){
-    c2 = obj.value.length;
-    document.getElementById("emailc").innerHTML = c2;
-    characters();
-}
-
-function countCharacter3(obj){
-    c3 = obj.value.length;
-    document.getElementById("usernamec").innerHTML = c3;
-    characters();
-}
-
-function countCharacter4(obj){
-    c4 = obj.value.length;
-    document.getElementById("passwordc").innerHTML = c4;
-    characters();
-}
-
-function countCharacter5(obj){
-    c5 = obj.value.length;
-    document.getElementById("passwordconfirmationc").innerHTML = c5;
-    characters();
-}
-
 function characters(){
-    document.getElementById("characters").innerHTML = c1 + c2 + c3 + c4 + c5;
+    var y = 0;
+    for(var x in map){
+        y = y + map[x];
+    }
+
+    document.getElementById("characters").innerHTML = y;
 }
 
 setInterval(time, 1000);
