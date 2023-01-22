@@ -1,14 +1,7 @@
 const d = new Date();
-var count = 0;
 var clicks = 0;
 var keys = 0;
-var ch = 0;
 var map = {};
-
-function onKeyDown(obj){
-    count = obj.value.length;
-}
-
 
 function onClick(){
     clicks++;
@@ -31,7 +24,7 @@ function onKeyPress(obj){
 
     child = element.children[1];
     child.innerHTML = obj.value.length;
-    ch = ch + (obj.value.length - count);
+    map[obj.id] = obj.value.length;
     totalKeys();
     characters();
 }
@@ -43,7 +36,12 @@ function time(){
 }
 
 function characters(){
-    document.getElementById("characters").innerHTML = ch;
+    var y = 0;
+    for(var x in map){
+        y = y + map[x];
+    }
+
+    document.getElementById("characters").innerHTML = y;
 }
 
 function reveal(){
