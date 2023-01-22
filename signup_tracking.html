@@ -15,40 +15,66 @@
 	</div>
 	
 	<br>
-	<p>Clicks: <a id="clicks">0</a></p>
-	<p>Totals keys pressed: <a id="keys">0</a></p>
-	<p>Totals time elapsed: <a id="time">0</a> sec</p>
-	<p>Totals characters typed: <a id="characters">0</a></p>
+	<p class="hidden">Clicks: <a id="clicks">0</a></p>
+	<p class="hidden">Totals keys pressed: <a id="keys">0</a></p>
+	<p class="hidden">Totals time elapsed: <a id="time">0</a> sec</p>
+	<p class="hidden">Totals characters typed: <a id="characters">0</a></p>
 	<br>
 	
 	<h1>Sign Up</h1>
+
+	<label for="username">User ID:</label><br>
+	<input class="input_text" type="text" name="username" onKeyDown="onKeyDown(this)"  onKeyUp="onKeyPress(this)" minlength="5" maxlength="12" required>
+	<p class="hidden"><span>Keys pressed: </span><a>0</a></p>
+	<p class="hidden"><span>Characters typed: </span><a>0</a></p><br>
+
+	<label for="password">Password:</label><br>
+	<input class="input_text" type="password" name="password" onKeyDown="onKeyDown(this)" onKeyUp="onKeyPress(this)" minlength="12" required>
+	<p class="hidden"><span>Keys pressed: </span><a>0</a></p>
+	<p class="hidden"><span>Characters typed: </span><a>0</a></p><br>
 	
-	<label for="firstname">First Name:</label><br>
-	<input class="input_text" type="text" id="firstname" name="firstname" onKeyUp="onKeyPress(this)">
-	<p><span>Keys pressed: </span><a id="firstnamek">0</a></p>
-	<p><span>Characters typed: </span><a id="firstnamec">0</a></p><br>
+	<label for="firstname">Name:</label><br>
+	<input class="input_text" type="text" name="firstname" onKeyDown="onKeyDown(this)" onKeyUp="onKeyPress(this)" required>
+	<p class="hidden"><span>Keys pressed: </span><a>0</a></p>
+	<p class="hidden"><span>Characters typed: </span><a>0</a></p><br>
+
+	<label for="address">Address:</label><br>
+	<input class="input_text" type="text" name="address" onKeyDown="onKeyDown(this)" onKeyUp="onKeyPress(this)">
+	<p class="hidden"><span>Keys pressed: </span><a>0</a></p>
+	<p class="hidden"><span>Characters typed: </span><a>0</a></p><br>
+
+	<label for="country">Country:</label><br>
+	<input class="input_text" type="text" name="country" onKeyDown="onKeyDown(this)" onKeyUp="onKeyPress(this)" required>
+	<p class="hidden"><span>Keys pressed: </span><a>0</a></p>
+	<p class="hidden"><span>Characters typed: </span><a>0</a></p><br>
+
+	<label for="zipcode">Zip Code:</label><br>
+	<input class="input_text" type="text" name="zipcode" onKeyDown="onKeyDown(this)" onKeyUp="onKeyPress(this)" required>
+	<p class="hidden"><span>Keys pressed: </span><a>0</a></p>
+	<p class="hidden"><span>Characters typed: </span><a>0</a></p><br>
 	
 	<label for="email">Email:</label><br>
-	<input class="input_text" type="email" id="email" name="email" onKeyUp="onKeyPress(this)">
-	<p><span>Keys pressed: </span><a id="emailk">0</a></p>
-	<p><span>Characters typed: </span><a id="emailc">0</a></p><br>
+	<input class="input_text" type="email" name="email" onKeyDown="onKeyDown(this)" onKeyUp="onKeyPress(this)" required>
+	<p class="hidden"><span>Keys pressed: </span><a>0</a></p>
+	<p class="hidden"><span>Characters typed: </span><a>0</a></p><br>
+
+	<label for="sex">Sex:</label><br>
+	<input class="input_text" type="text" name="sex" onKeyDown="onKeyDown(this)" onKeyUp="onKeyPress(this)" required>
+	<p class="hidden"><span>Keys pressed: </span><a>0</a></p>
+	<p class="hidden"><span>Characters typed: </span><a>0</a></p><br>
+
+	<label for="language">Language:</label><br>
+	<input class="input_text" type="text" name="language" onKeyDown="onKeyDown(this)" onKeyUp="onKeyPress(this)" required>
+	<p class="hidden"><span>Keys pressed: </span><a>0</a></p>
+	<p class="hidden"><span>Characters typed: </span><a>0</a></p><br>
+
+	<label for="about">About:</label><br>
+	<input class="input_text" type="text" name="about" onKeyDown="onKeyDown(this)" onKeyUp="onKeyPress(this)">
+	<p class="hidden"><span>Keys pressed: </span><a>0</a></p>
+	<p class="hidden"><span>Characters typed: </span><a>0</a></p><br>
 	
-	<label for="username">Username:</label><br>
-	<input class="input_text" type="text" id="username" name="username" onKeyUp="onKeyPress(this)">
-	<p><span>Keys pressed: </span><a id="usernamek">0</a></p>
-	<p><span>Characters typed: </span><a id="usernamec">0</a></p><br>
-	
-	<label for="password">Password:</label><br>
-	<input class="input_text" type="password" id="password" name="password" onKeyUp="onKeyPress(this)">
-	<p><span>Keys pressed: </span><a id="passwordk">0</a></p>
-	<p><span>Characters typed: </span><a id="passwordc">0</a></p><br>
-	
-	<label for="confirmationpassword">Password confirmation:</label><br>
-	<input class="input_text" type="password" id="confirmationpassword" name="confirmationpassword" onKeyUp="onKeyPress(this)">
-	<p><span>Keys pressed: </span><a id="confirmationpasswordk">0</a></p>
-	<p><span>Characters typed: </span><a id="passwordconfirmationc">0</a></p><br>
-	
-	<button onclick="location.href='index.html'">Sign Up</button><br>
+	<button type="submit">Sign Up</button><br>
+	<button onClick="reveal()">Get tracking stats</button><br>
 	
 	<footer>
 	<p>Developed by Urte and Diego</p>
@@ -56,4 +82,3 @@
 	
 	</body>
 	</html>
-
