@@ -7,56 +7,142 @@ function validateForm() {
     var nameError = document.getElementById('name-error');
     var zipError = document.getElementById('zip-error');
     var name = document.getElementById('firstname').value;
+    var country = document.getElementById('country').value;
+    var countryError = document.getElementById('country-error');
+    var sexError = document.getElementById('sex-error');
+    var sex = document.getElementById('sex').value;
     var isValid = true;
    
-
-    if (userID.length < 5 || userID.length>12) {
+    function endswithspecialcharacter(str){
+        var x = "!@#$%^&*(),.?\":{}|<></>1234567890";
+        if(x.includes(str.charAt(str.length-1))){
+            return true;
+        }
+        return false;
+    }
+    if(userID.length==0){
+        userIDError.innerHTML = "Please provide ID.<br>";
+    }
+    else if (userID.length < 5 || userID.length>12) {
         userIDError.innerHTML = "User ID must be between 5-12 characters long.<br>";
         isValid = false;
     } 
-    if (!userID.match(/^[A-Z]/)) {
+    else if (!userID.match(/^[A-Z]/)) {
         userIDError.innerHTML += "User ID must start with a capital letter. <br>";
         isValid = false;
     }
-    if (!userID.match(/[!@#$%^&*(),.?":{}|<>]$/) && !userID.match(/[0-9]$/) ) {
+    else if(!endswithspecialcharacter(userID)){
         userIDError.innerHTML += "User ID must end with a special character or number. <br>";
         isValid = false;
     }
-    
-    if(password.length<12){
+    function containsnumber(str){
+        for(var x of str){
+            if('0'<=x && x<='9'){
+                return true;
+            }
+        }
+        return false;
+    }
+    var hasCapitalLetter = /[A-Z]/.test(password);
+    var hasNormalLetter = /[a-z]/.test(password);
+    function containsspecialcharacter(str){
+        var y = "!@#$%^&*(),.?\":{}|<></>";
+        for(var x of str){
+            if(y.includes(x)){
+                return true;
+            }
+        } 
+        return false;
+    }
+
+    if(password.length==0){
+        passwordError.innerHTML = "Please provide password. <br>";
+    }
+    else if(password.length<12){
         passwordError.innerHTML = "Password must have at least 12 characters. <br>";
         isValid=false;
     } 
-    // check if password contains a number
-    if (!password.match(/[0-9]/)) {
+    else if (!containsnumber(password)) {
+
         passwordError.innerHTML += "Password must contain at least one number. <br>";
         isValid = false;
     }
-    // check if password contains a capital letter
-    var hasCapitalLetter = /[A-Z]/.test(password);
-    if (!hasCapitalLetter) {
+    else if (!hasCapitalLetter) {
         passwordError.innerHTML += "Password must contain at least one uppercase letter.<br>";
         isValid = false;
     }
-    // check if password contains a lowercase letter
-    var hasNormalLetter = /[a-z]/.test(password);
-    if (!hasNormalLetter) {
+    else if (!hasNormalLetter) {
         passwordError.innerHTML += "Password must contain at least one lowercase letter.<br>";
         isValid = false;
     }
-    if (!password.match(/[!@#$%^&*(),.?":{}|<>]/)) {
+    else if (!containsspecialcharacter(password)) {
         passwordError.innerHTML += "Password must contain at least one symbol. <br>";
         isValid = false;
     }
+    function containsonlyalphabet(str){
+        for(var x of str){
+            if(('a'>x || x>'z') && ('A'>x || 'Z'<x)){
+                return false;
+            }
+        }
+        return true;
+    }
+    if(name.length==0){
+        nameError.innerHTML = "Please provide name.<br>";
+        isValid=false;
 
-    if (!name.match(/^[A-Za-z]+$/)) {
+    }
+    else if (!containsonlyalphabet(name)) {
         nameError.innerHTML = "Name can only contain the alphabet.<br>";
         isValid = false;
     } 
-    if (!zip.match(/^\d{4}[a-zA-Z]{2}$/)) {
-        zipError.innerHTML = "Please enter a valid zip code. <br> ";
+    function validzip(str){
+        if(str.charAt(0)>9 || str.charAt(0)<0){
+            return false;
+        }
+        if(str.charAt(1)>9 || str.charAt(1)<0){
+            return false;
+        }
+        if(str.charAt(2)>9 || str.charAt(2)<0){
+            return false;
+        }
+        if(str.charAt(3)>9 || str.charAt(3)<0){
+            return false;
+        }
+        if(str.charAt(4)<'A' || str.charAt(4)>'Z'){
+            return false;
+        }
+        if(str.charAt(5)<'A' || str.charAt(5)>'Z'){
+            return false;
+        }
+        return true;
+
+    }
+    if(zip.length==0){
+        zipError.innerHTML = "Enter zip code <br> ";
+        isValid=false;
+
+    }
+    else if(zip.length!=6){
+        zipError.innerHTML = "Enter valid zip code <br> ";
+        isValid=false;
+    }
+    else if (!validzip(zip)) {
+        zipError.innerHTML = "Zip code should have 4 numbers and 2 capital letters. <br> ";
         isValid = false;
     }
+
+    if(country.length==0){
+        countryError.innerHTML = "Please enter your country. <br>";
+        isValid=false;
+    }
+    if(sex.length==0){
+        sexError.innerHTML = "Please enter your sex. <br>";
+        isValid=false;
+    }
+
+    
+
 
     return isValid;
 }
@@ -65,9 +151,13 @@ function clearAndValidateForm() {
     var passwordError = document.getElementById('password-error');
     var nameError = document.getElementById('name-error');
     var zipError = document.getElementById('zip-error');
+    var countryError = document.getElementById('country-error');
+    var sexError = document.getElementById('sex-error');
     userIDError.innerHTML = "";
     passwordError.innerHTML = "";
+    countryError.innerHTML = "";
     nameError.innerHTML="";
     zipError.innerHTML="";
+    sexError.innerHTML="";
     return validateForm();
 }
