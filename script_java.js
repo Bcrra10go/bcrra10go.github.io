@@ -11,6 +11,10 @@ function validateForm() {
     var countryError = document.getElementById('country-error');
     var sexError = document.getElementById('sex-error');
     var sex = document.getElementById('sex').value;
+    var language = document.getElementById('language').value;
+    var languageError = document.getElementById('language-error');
+    var emailError = document.getElementById('email-error');
+    var email = document.getElementById('email').value;
     var isValid = true;
    
     function endswithspecialcharacter(str){
@@ -88,7 +92,7 @@ function validateForm() {
         return true;
     }
     if(name.length==0){
-        nameError.innerHTML = "Please provide name.<br>";
+        nameError.innerHTML = "Please provide your name.<br>";
         isValid=false;
 
     }
@@ -124,7 +128,7 @@ function validateForm() {
 
     }
     else if(zip.length!=6){
-        zipError.innerHTML = "Enter valid zip code <br> ";
+        zipError.innerHTML = "Enter a valid zip code containing 6 characters <br> ";
         isValid=false;
     }
     else if (!validzip(zip)) {
@@ -140,7 +144,23 @@ function validateForm() {
         sexError.innerHTML = "Please enter your sex. <br>";
         isValid=false;
     }
-
+    if(language.length==0){
+        languageError.innerHTML="Please enter your language<br>";
+        isValid=false;
+    }
+    function containseta(str){
+        for(var x of str){
+            if((x=='@')){
+                return true;
+            }
+        }
+        return false;}
+    if(email.length==0){
+        emailError.innerHTML="Please enter an email <br>";
+    }
+    else if(!containseta(email)){
+        emailError.innerHTML="Please enter a valid email <br>";
+    }
     
 
 
@@ -153,11 +173,16 @@ function clearAndValidateForm() {
     var zipError = document.getElementById('zip-error');
     var countryError = document.getElementById('country-error');
     var sexError = document.getElementById('sex-error');
+    var languageError=document.getElementById('language-error');
+    var emailError=document.getElementById('email-error');
     userIDError.innerHTML = "";
     passwordError.innerHTML = "";
     countryError.innerHTML = "";
     nameError.innerHTML="";
     zipError.innerHTML="";
     sexError.innerHTML="";
+    languageError.innerHTML="";
+    emailError.innerHTML="";
+
     return validateForm();
 }
