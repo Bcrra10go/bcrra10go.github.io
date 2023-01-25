@@ -24,6 +24,12 @@ function validateForm() {
         }
         return false;
     }
+    function startswithcapital(str){
+        if(str.charAt(0)>='A' && str.charAt(0)<='Z'){
+            return true;
+        }
+        return false;
+    }
     if(userID.length==0){
         userIDError.innerHTML = "Please provide ID.<br>";
     }
@@ -31,7 +37,7 @@ function validateForm() {
         userIDError.innerHTML = "User ID must be between 5-12 characters long.<br>";
         isValid = false;
     } 
-    else if (!userID.match(/^[A-Z]/)) {
+    else if (!startswithcapital(userID)) {
         userIDError.innerHTML += "User ID must start with a capital letter. <br>";
         isValid = false;
     }
@@ -47,8 +53,7 @@ function validateForm() {
         }
         return false;
     }
-    var hasCapitalLetter = /[A-Z]/.test(password);
-    var hasNormalLetter = /[a-z]/.test(password);
+
     function containsspecialcharacter(str){
         var y = "!@#$%^&*(),.?\":{}|<></>";
         for(var x of str){
