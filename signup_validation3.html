@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="images/S.png" rel="icon">
     <link href="styles.css" rel="stylesheet">
-    <script src="script_java.js"></script>
     <title>Sign Up</title>
 </head>
 <body>
@@ -16,17 +15,17 @@
     <h1>Sign Up</h1>
     <form onsubmit="return clearAndValidateForm()">
         <label for="userID">User ID:</label><br>
-        <input class="input_text" type="text" id="userID" name="userID" required>
+        <input class="input_text" type="text" id="userID" name="userID" >
         <br>
         <span id="userID-error"></span>
         <br>
         <label for="password">Password:</label><br>
-        <input class="input_text" type="password" id="password" name="password" required>
+        <input class="input_text" type="password" id="password" name="password">
         <br>
         <span id="password-error"></span>
         <br>
         <label for="firstname">Name:</label><br>
-        <input class="input_text" type="text" id="firstname" name="firstname" required>
+        <input class="input_text" type="text" id="firstname" name="firstname" >
         <br>
         <span id="name-error"></span>
         <br>
@@ -35,26 +34,32 @@
         <br><br>
 
         <label for="country">Country:</label><br>
-        <input class="input_text" type="text" id="country" name="country" required>
-        <br><br>
+        <input class="input_text" type="text" id="country" name="country">
+        <br>
+        <span id="country-error"></span>
+        <br>
 
         <label for="zip">ZIP code:</label><br>
-        <input class="input_text" type="text" id="zip" name="zip" required>
+        <input class="input_text" type="text" id="zip" name="zip" >
         <br>
         <span id="zip-error"></span>
         <br>
 
         <label for="email">Email:</label><br>
-        <input class="input_text" type="email" id="email" name="email" required>
-        <br><br>
+        <input class="input_text" type="text" id="email" name="email" >
+        <br><span id="email-error"></span>
+        <br>
 
         <label for="sex">Sex:</label><br>
-        <input class="input_text" type="text" id="sex" name="sex" required>
-        <br><br>
+        <input class="input_text" type="text" id="sex" name="sex" >
+        <br>
+        <span id="sex-error"></span>
+        <br>
 
         <label for="language">Language:</label><br>
-        <input class="input_text" type="text" id="language" name="language" required>
-        <br><br>
+        <input class="input_text" type="text" id="language" name="language" >
+        <br>
+        <span id="language-error"></span><br>
 
         <label for="about">About/bio:</label><br>
         <input class="input_text" type="text" id="about" name="about">
@@ -63,5 +68,6 @@
 
         <button type="submit">Submit</button>
     </form>
+    <script src="script_validation2.js"></script>
 </body>
 </html>
